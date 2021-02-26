@@ -1,4 +1,5 @@
 {
   "goodbye": "ufwiederluege",
-  "hello": "tschau {name}"
+  "hello": "tschau {name}",
+  "car": "Auto | Autos"
 }

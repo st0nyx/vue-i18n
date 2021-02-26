@@ -2,9 +2,22 @@
   <div>
     <p>{{ $t("hello", { name }) }}</p>
     <p>{{ $t("goodbye") }}</p>
+
+    <p>{{ $tc("car", 1) }}</p>
+    <p>{{ $tc("car", 5) }}</p>
+
+    <p>{{ $tc("person", 0) }}</p>
+    <p>{{ $tc("person", 1) }}</p>
+    <p>{{ $tc("person", 5) }}</p>
+
+
     <button @click="setLocale('en')" class="button">English</button>
     <button @click="setLocale('es')" class="button">Spanish</button>
     <button @click="setLocale('de')" class="button">German</button>
+
+
+
+
   </div>
 </template>
 <script>
