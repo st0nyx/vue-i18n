@@ -17,8 +17,8 @@
 
     <p>{{ $n(100, "currency") }}</p>
 
-    <p>{{ product.name }}: {{ $n(product.price, "currency") }}</p>
-    <p>{{ product.stock }} left in stock</p>
+<!--    <p>{{ product.name }}: {{ $n(product.price, "currency") }}</p>-->
+<!--    <p>{{ product.stock }} left in stock</p>-->
 
     <div>
       <i18n-n :value="4567.45" format="currency">
@@ -41,6 +41,13 @@
         </template>
       </i18n-n>
     </div>
+
+    <i18n path="terms" tag="p">
+      <template v-slot:termsURL>
+<!--        <a href="/terms">{{ $t("termsLink") }}</a>-->
+        <button @click="openModal">{{ $t("termsLink")}}</button>
+      </template>
+    </i18n>
 
     <button @click="setLocale('en-GB')" class="button">UK</button>
     <button @click="setLocale('en-US')" class="button">USA</button>
