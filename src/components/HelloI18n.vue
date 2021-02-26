@@ -15,11 +15,16 @@
     <p>{{ $d(new Date(), "long") }}</p>
     <p>{{ $d(new Date(), "long", "en-GB") }}</p>
 
+    <p>{{ $n(100, "currency") }}</p>
 
 
-    <button @click="setLocale('en')" class="button">English</button>
-    <button @click="setLocale('es')" class="button">Spanish</button>
-    <button @click="setLocale('de')" class="button">German</button>
+    <p>{{ product.name }}: {{ $n(product.price, "currency") }}</p>
+    <p>{{ product.stock }} left in stock</p>
+
+
+    <button @click="setLocale('en-GB')" class="button">UK</button>
+    <button @click="setLocale('en-US')" class="button">USA</button>
+    <button @click="setLocale('es-ES')" class="button">German</button>
 
 
 
@@ -27,6 +32,24 @@
   </div>
 </template>
 <script>
+const products = {
+  "en-GB": {
+    name: "Red Jeans",
+    stock: 4,
+    price: 89
+  },
+  "en-US": {
+    name: "Red Jeans",
+    stock: 2,
+    price: 109
+  },
+  "es-ES": {
+    name: "Vaqueros Rojos",
+    stock: 9,
+    price: 99
+  }
+};
+
 export default {
   name: "HelloI18n",
   data() {
@@ -40,6 +63,12 @@ export default {
       this.$i18n.locale = locale;
       localStorage.setItem("locale", locale);
     }
+  },
+  computed: {
+    product() {
+      return products[this.$i18n.locale];
+    }
   }
+
 };
 </script>
