@@ -1,6 +1,7 @@
 {
   "goodbye": "adios",
   "hello": "hola {name}",
-  "terms": "Acepto los {termsURL} del contrato de servicio",
-  "termsLink": "términos y condiciones"
+  "person": "",
+  "terms": "",
+  "termsLink": ""
 }

@@ -1,5 +1,8 @@
 {
+  "car": "Auto | Autos",
   "goodbye": "ufwiederluege",
   "hello": "tschau {name}",
-  "car": "Auto | Autos"
+  "person": "keine Person | eine Person | {n}Personen",
+  "terms": "ich akzeptiere alle",
+  "termsLink": "Bedingingen"
 }

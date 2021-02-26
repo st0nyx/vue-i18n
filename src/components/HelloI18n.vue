@@ -1,5 +1,13 @@
 <template>
   <div>
+
+    <div>
+      <button v-for="entry in languages" :key="entry.title" @click="setLocale(entry.language)">
+        <flag :iso="entry.flag" v-bind:squared=false /> {{entry.title}}
+      </button>
+    </div>
+
+
     <p>{{ $t("hello", { name }) }}</p>
     <p>{{ $t("goodbye") }}</p>
 
@@ -44,8 +52,8 @@
 
     <i18n path="terms" tag="p">
       <template v-slot:termsURL>
-<!--        <a href="/terms">{{ $t("termsLink") }}</a>-->
-        <button @click="openModal">{{ $t("termsLink")}}</button>
+        <a href="/terms">{{ $t("termsLink") }}</a>
+<!--        <button @click="openModal">{{ $t("termsLink")}}</button>-->
       </template>
     </i18n>
 
@@ -77,7 +85,11 @@ export default {
   name: "HelloI18n",
   data() {
     return {
-      name: "Stonyx"
+      name: "Stonyx",
+      languages: [
+        { flag: 'us', language: 'en', title: 'English' },
+        { flag: 'de', language: 'de', title: 'Deutsch' }
+      ]
     };
   },
   methods: {

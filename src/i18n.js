@@ -18,7 +18,7 @@ const numberFormats = {
       // currencyDisplay: "code"
     }
   },
-  'es-ES': {
+  'de': {
     currency: {
       style: "currency",
       currency: "EUR",
