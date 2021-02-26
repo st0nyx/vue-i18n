@@ -1,4 +1,4 @@
 {
   "goodbye": "ufwiederluege",
-  "hello": "tschau zäme"
+  "hello": "tschau {name}"
 }

@@ -1,4 +1,4 @@
 {
   "goodbye": "adios",
-  "hello": "hola"
+  "hello": "hola {name}"
 }
