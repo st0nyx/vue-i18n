@@ -10,6 +10,12 @@
     <p>{{ $tc("person", 1) }}</p>
     <p>{{ $tc("person", 5) }}</p>
 
+    <p>{{ $d(new Date(), "short") }}</p>
+    <p>{{ $d(new Date(), "short", "en-GB") }}</p>
+    <p>{{ $d(new Date(), "long") }}</p>
+    <p>{{ $d(new Date(), "long", "en-GB") }}</p>
+
+
 
     <button @click="setLocale('en')" class="button">English</button>
     <button @click="setLocale('es')" class="button">Spanish</button>
